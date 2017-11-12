@@ -1,0 +1,770 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/DisplayLives.o
+LOAD build/StartTimer.o
+LOAD build/sideArray.o
+LOAD build/jtag.o
+LOAD build/LoseGame.o
+LOAD build/framebuffer.o
+LOAD build/MEDIAN.o
+LOAD build/Move.o
+LOAD build/NINE.o
+LOAD build/CheckCollision.o
+LOAD build/BLACKNum.o
+LOAD build/THREE.o
+LOAD build/Draw.o
+LOAD build/SHRUB_A.o
+LOAD build/PASSED.o
+LOAD build/DUMB.o
+LOAD build/IncrementFuel.o
+LOAD build/BUSTED.o
+LOAD build/FOURX4ROAD.o
+LOAD build/GRASS.o
+LOAD build/Paint.o
+LOAD build/DisplayFuel.o
+LOAD build/generateRandomNum.o
+LOAD build/clearScreen.o
+LOAD build/SEVEN.o
+LOAD build/collisionDetection.o
+LOAD build/main.o
+LOAD build/ZERO.o
+LOAD build/SIX.o
+LOAD build/TWO.o
+LOAD build/CAR.o
+LOAD build/InitializeGame.o
+LOAD build/BLACK190X64.o
+LOAD build/SpawnFinishLine.o
+LOAD build/COCAINE.o
+LOAD build/FINISH.o
+LOAD build/DrawAt.o
+LOAD build/ResetGame.o
+LOAD build/Left_Transition.o
+LOAD build/SELECTOR.o
+LOAD build/ONE.o
+LOAD build/ROAD.o
+LOAD build/SMART.o
+LOAD build/LIFE.o
+LOAD build/SIDES.o
+LOAD build/MainMenu.o
+LOAD build/COCAINETANK.o
+LOAD build/EIGHT.o
+LOAD build/FOUR.o
+LOAD build/SNES.o
+LOAD build/CREATORS.o
+LOAD build/INTRO.o
+LOAD build/FIVE.o
+LOAD build/WALL.o
+LOAD build/POLICE.o
+LOAD build/MoveFinishLine.o
+LOAD build/MoveCocaine.o
+LOAD build/Right_Transition.o
+LOAD build/getObjectElement.o
+LOAD build/DecrementFuel.o
+LOAD build/SpawnCocaine.o
+LOAD build/TIME.o
+LOAD build/GameLength.o
+LOAD build/DecipherSNES.o
+LOAD build/DecrementLives.o
+LOAD build/BLACK.o
+LOAD build/Transition.o
+LOAD build/SHRUB_B.o
+LOAD build/Filler.o
+LOAD build/DrawArray.o
+LOAD build/SpawnPig.o
+LOAD build/MovePig.o
+LOAD build/WinGame.o
+
+.init           0x00008000        0x4
+ *(.init)
+ .init          0x00008000        0x4 build/main.o
+                0x00008000                _start
+
+.data           0x00009080   0x12e168
+ *(.data)
+ .data          0x00009080        0x0 build/DisplayLives.o
+ .data          0x00009080        0x0 build/StartTimer.o
+ .data          0x00009080        0x0 build/sideArray.o
+ .data          0x00009080        0x0 build/jtag.o
+ .data          0x00009080        0x0 build/LoseGame.o
+ .data          0x00009080       0x70 build/framebuffer.o
+                0x000090e0                FrameBufferPointer
+ .data          0x000090f0      0x828 build/MEDIAN.o
+                0x000090f0                MEDIAN
+ .data          0x00009918        0x0 build/Move.o
+ .data          0x00009918      0x394 build/NINE.o
+                0x00009918                NINE
+ .data          0x00009cac        0x0 build/CheckCollision.o
+ .data          0x00009cac      0x390 build/BLACKNum.o
+                0x00009cac                BLACKNum
+ .data          0x0000a03c      0x394 build/THREE.o
+                0x0000a03c                THREE
+ .data          0x0000a3d0        0x0 build/Draw.o
+ .data          0x0000a3d0      0x828 build/SHRUB_A.o
+                0x0000a3d0                SHRUB_A
+ .data          0x0000abf8    0x55824 build/PASSED.o
+                0x0000abf8                PASSED
+ .data          0x0006041c     0x3028 build/DUMB.o
+                0x0006041c                DUMB
+ .data          0x00063444        0x0 build/IncrementFuel.o
+ .data          0x00063444    0x3f024 build/BUSTED.o
+                0x00063444                BUSTED
+ .data          0x000a2468       0x44 build/FOURX4ROAD.o
+                0x000a2468                FOURX4ROAD
+ .data          0x000a24ac      0x824 build/GRASS.o
+                0x000a24ac                GRASS
+ .data          0x000a2cd0        0x8 build/Paint.o
+ .data          0x000a2cd8       0x28 build/DisplayFuel.o
+ .data          0x000a2d00       0x10 build/generateRandomNum.o
+ .data          0x000a2d10        0x0 build/clearScreen.o
+ .data          0x000a2d10      0x394 build/SEVEN.o
+                0x000a2d10                SEVEN
+ .data          0x000a30a4        0xc build/collisionDetection.o
+ .data          0x000a30b0        0x0 build/main.o
+ .data          0x000a30b0      0x394 build/ZERO.o
+                0x000a30b0                ZERO
+ .data          0x000a3444      0x394 build/SIX.o
+                0x000a3444                SIX
+ .data          0x000a37d8      0x394 build/TWO.o
+                0x000a37d8                TWO
+ .data          0x000a3b6c     0x31a8 build/CAR.o
+                0x000a3b6c                CAR
+ .data          0x000a6d14        0x0 build/InitializeGame.o
+ .data          0x000a6d14     0x3028 build/BLACK190X64.o
+                0x000a6d14                BLACK190X32
+ .data          0x000a9d3c        0x0 build/SpawnFinishLine.o
+ .data          0x000a9d3c     0x3028 build/COCAINE.o
+                0x000a9d3c                COCAINE
+ .data          0x000acd64        0x0 build/FINISH.o
+ .data          0x000acd64        0x0 build/DrawAt.o
+ .data          0x000acd64        0x0 build/ResetGame.o
+ .data          0x000acd64        0x0 build/Left_Transition.o
+ .data          0x000acd64      0x828 build/SELECTOR.o
+                0x000acd64                SELECTOR
+ .data          0x000ad58c      0x394 build/ONE.o
+                0x000ad58c                ONE
+ .data          0x000ad920      0x828 build/ROAD.o
+                0x000ad920                ROAD
+ .data          0x000ae148     0x3028 build/SMART.o
+                0x000ae148                SMART
+ .data          0x000b1170      0x830 build/LIFE.o
+                0x000b1170                LIFE
+ .data          0x000b19a0      0x270 build/SIDES.o
+ .data          0x000b1c10        0x0 build/MainMenu.o
+ .data          0x000b1c10      0x830 build/COCAINETANK.o
+                0x000b1c10                COCAINETANK
+ .data          0x000b2440      0x394 build/EIGHT.o
+                0x000b2440                EIGHT
+ .data          0x000b27d4      0x394 build/FOUR.o
+                0x000b27d4                FOUR
+ .data          0x000b2b68        0x0 build/SNES.o
+ .data          0x000b2b68    0x1190c build/CREATORS.o
+                0x000b2b68                CREATORS
+ .data          0x000c4474    0x6e144 build/INTRO.o
+                0x000c4474                INTRO
+ .data          0x001325b8      0x394 build/FIVE.o
+                0x001325b8                FIVE
+ .data          0x0013294c      0x824 build/WALL.o
+                0x0013294c                WALL
+ .data          0x00133170     0x3028 build/POLICE.o
+                0x00133170                POLICE
+ .data          0x00136198        0x0 build/MoveFinishLine.o
+ .data          0x00136198        0x0 build/MoveCocaine.o
+ .data          0x00136198        0x0 build/Right_Transition.o
+ .data          0x00136198        0x0 build/getObjectElement.o
+ .data          0x00136198        0x0 build/DecrementFuel.o
+ .data          0x00136198        0x0 build/SpawnCocaine.o
+ .data          0x00136198        0x4 build/TIME.o
+                0x00136198                TIME
+ .data          0x0013619c        0x0 build/GameLength.o
+ .data          0x0013619c        0x0 build/DecipherSNES.o
+ .data          0x0013619c        0x0 build/DecrementLives.o
+ .data          0x0013619c      0x824 build/BLACK.o
+                0x0013619c                BLACK
+ .data          0x001369c0        0x0 build/Transition.o
+ .data          0x001369c0      0x828 build/SHRUB_B.o
+                0x001369c0                SHRUB_B
+ .data          0x001371e8        0x0 build/Filler.o
+ .data          0x001371e8        0x0 build/DrawArray.o
+ .data          0x001371e8        0x0 build/SpawnPig.o
+ .data          0x001371e8        0x0 build/MovePig.o
+ .data          0x001371e8        0x0 build/WinGame.o
+ *.c.o(*)
+
+.igot.plt       0x001371e8        0x0
+ .igot.plt      0x00000000        0x0 build/DisplayLives.o
+
+.text           0x001371e8     0xa42c
+ *.c.o(.text)
+ *(.text)
+ .text          0x001371e8       0xbc build/DisplayLives.o
+                0x001371e8                DisplayLives
+ .text          0x001372a4       0x28 build/StartTimer.o
+                0x001372a4                StartTimer
+ .text          0x001372cc      0x120 build/sideArray.o
+                0x001372cc                paintArray
+                0x00137330                fillArray
+                0x001373a4                updateArray
+ .text          0x001373ec       0x8c build/jtag.o
+                0x001373ec                EnableJTAG
+ .text          0x00137478       0x2c build/LoseGame.o
+                0x00137478                LoseGame
+ .text          0x001374a4       0x80 build/framebuffer.o
+                0x001374a4                InitFrameBuffer
+ .text          0x00137524        0x0 build/MEDIAN.o
+ .text          0x00137524       0x7c build/Move.o
+                0x00137524                Move
+ .text          0x001375a0        0x0 build/NINE.o
+ .text          0x001375a0       0xac build/CheckCollision.o
+                0x001375a0                CheckCollision
+ .text          0x0013764c        0x0 build/BLACKNum.o
+ .text          0x0013764c        0x0 build/THREE.o
+ .text          0x0013764c       0x50 build/Draw.o
+                0x0013764c                Draw
+ .text          0x0013769c        0x0 build/SHRUB_A.o
+ .text          0x0013769c        0x0 build/PASSED.o
+ .text          0x0013769c        0x0 build/DUMB.o
+ .text          0x0013769c       0x30 build/IncrementFuel.o
+                0x0013769c                IncrementFuel
+ .text          0x001376cc        0x0 build/BUSTED.o
+ .text          0x001376cc        0x0 build/FOURX4ROAD.o
+ .text          0x001376cc        0x0 build/GRASS.o
+ .text          0x001376cc       0xc4 build/Paint.o
+                0x001376cc                Paint
+ .text          0x00137790      0x100 build/DisplayFuel.o
+                0x00137790                DisplayFuel
+ .text          0x00137890       0xa8 build/generateRandomNum.o
+                0x00137890                generateRandomNum
+ .text          0x00137938       0x5c build/clearScreen.o
+                0x00137938                clearScreen
+ .text          0x00137994        0x0 build/SEVEN.o
+ .text          0x00137994      0x14c build/collisionDetection.o
+                0x00137994                collisionDetection
+                0x00137acc                overLap
+ .text          0x00137ae0       0x14 build/main.o
+                0x00137af0                hang
+ .text          0x00137af4        0x0 build/ZERO.o
+ .text          0x00137af4        0x0 build/SIX.o
+ .text          0x00137af4        0x0 build/TWO.o
+ .text          0x00137af4        0x0 build/CAR.o
+ .text          0x00137af4       0xf4 build/InitializeGame.o
+                0x00137af4                InitializeGame
+ .text          0x00137be8        0x0 build/BLACK190X64.o
+ .text          0x00137be8       0x60 build/SpawnFinishLine.o
+                0x00137be8                SpawnFinishLine
+ .text          0x00137c48        0x0 build/COCAINE.o
+ .text          0x00137c48     0x9030 build/FINISH.o
+                0x00137c48                FINISH
+ .text          0x00140c78       0x74 build/DrawAt.o
+                0x00140c78                DrawAt
+ .text          0x00140cec       0xa0 build/ResetGame.o
+                0x00140cec                ResetGame
+ .text          0x00140d8c       0x70 build/Left_Transition.o
+                0x00140d8c                Left_Transition
+ .text          0x00140dfc        0x0 build/SELECTOR.o
+ .text          0x00140dfc        0x0 build/ONE.o
+ .text          0x00140dfc        0x0 build/ROAD.o
+ .text          0x00140dfc        0x0 build/SMART.o
+ .text          0x00140dfc        0x0 build/LIFE.o
+ .text          0x00140dfc       0x3c build/SIDES.o
+                0x00140dfc                sideLoop
+ .text          0x00140e38       0xd0 build/MainMenu.o
+                0x00140e38                MainMenu
+ .text          0x00140f08        0x0 build/COCAINETANK.o
+ .text          0x00140f08        0x0 build/EIGHT.o
+ .text          0x00140f08        0x0 build/FOUR.o
+ .text          0x00140f08      0x208 build/SNES.o
+                0x00140f08                SNES
+                0x0014103c                Wait
+ .text          0x00141110        0x0 build/CREATORS.o
+ .text          0x00141110        0x0 build/INTRO.o
+ .text          0x00141110        0x0 build/FIVE.o
+ .text          0x00141110        0x0 build/WALL.o
+ .text          0x00141110        0x0 build/POLICE.o
+ .text          0x00141110       0x5c build/MoveFinishLine.o
+                0x00141110                MoveFinishLine
+ .text          0x0014116c       0x64 build/MoveCocaine.o
+                0x0014116c                MoveCocaine
+ .text          0x001411d0       0x70 build/Right_Transition.o
+                0x001411d0                Right_Transition
+ .text          0x00141240       0x20 build/getObjectElement.o
+                0x00141240                getObjectElement
+ .text          0x00141260       0x38 build/DecrementFuel.o
+                0x00141260                DecrementFuel
+ .text          0x00141298       0x68 build/SpawnCocaine.o
+                0x00141298                SpawnCocaine
+ .text          0x00141300        0x0 build/TIME.o
+ .text          0x00141300       0x30 build/GameLength.o
+                0x00141300                GameLength
+ .text          0x00141330       0x64 build/DecipherSNES.o
+                0x00141330                DecipherSNES
+ .text          0x00141394       0x30 build/DecrementLives.o
+                0x00141394                DecrementLives
+ .text          0x001413c4        0x0 build/BLACK.o
+ .text          0x001413c4       0xa0 build/Transition.o
+                0x001413c4                Transition
+ .text          0x00141464        0x0 build/SHRUB_B.o
+ .text          0x00141464       0x78 build/Filler.o
+                0x00141464                Filler
+ .text          0x001414dc       0x6c build/DrawArray.o
+                0x001414dc                DrawArray
+ .text          0x00141548       0x3c build/SpawnPig.o
+                0x00141548                SpawnPig
+ .text          0x00141584       0x64 build/MovePig.o
+                0x00141584                MovePig
+ .text          0x001415e8       0x2c build/WinGame.o
+                0x001415e8                WinGame
+OUTPUT(build/output.elf elf32-littlearm)
+
+.glue_7         0x00141614        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00141614        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00141614        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00141614        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00141614        0x0
+ .iplt          0x00000000        0x0 build/DisplayLives.o
+
+.rel.dyn        0x00141614        0x0
+ .rel.iplt      0x00000000        0x0 build/DisplayLives.o
+
+.bss            0x00141614        0x0
+ .bss           0x00141614        0x0 build/DisplayLives.o
+ .bss           0x00141614        0x0 build/StartTimer.o
+ .bss           0x00141614        0x0 build/sideArray.o
+ .bss           0x00141614        0x0 build/jtag.o
+ .bss           0x00141614        0x0 build/LoseGame.o
+ .bss           0x00141614        0x0 build/framebuffer.o
+ .bss           0x00141614        0x0 build/MEDIAN.o
+ .bss           0x00141614        0x0 build/Move.o
+ .bss           0x00141614        0x0 build/NINE.o
+ .bss           0x00141614        0x0 build/CheckCollision.o
+ .bss           0x00141614        0x0 build/BLACKNum.o
+ .bss           0x00141614        0x0 build/THREE.o
+ .bss           0x00141614        0x0 build/Draw.o
+ .bss           0x00141614        0x0 build/SHRUB_A.o
+ .bss           0x00141614        0x0 build/PASSED.o
+ .bss           0x00141614        0x0 build/DUMB.o
+ .bss           0x00141614        0x0 build/IncrementFuel.o
+ .bss           0x00141614        0x0 build/BUSTED.o
+ .bss           0x00141614        0x0 build/FOURX4ROAD.o
+ .bss           0x00141614        0x0 build/GRASS.o
+ .bss           0x00141614        0x0 build/Paint.o
+ .bss           0x00141614        0x0 build/DisplayFuel.o
+ .bss           0x00141614        0x0 build/generateRandomNum.o
+ .bss           0x00141614        0x0 build/clearScreen.o
+ .bss           0x00141614        0x0 build/SEVEN.o
+ .bss           0x00141614        0x0 build/collisionDetection.o
+ .bss           0x00141614        0x0 build/main.o
+ .bss           0x00141614        0x0 build/ZERO.o
+ .bss           0x00141614        0x0 build/SIX.o
+ .bss           0x00141614        0x0 build/TWO.o
+ .bss           0x00141614        0x0 build/CAR.o
+ .bss           0x00141614        0x0 build/InitializeGame.o
+ .bss           0x00141614        0x0 build/BLACK190X64.o
+ .bss           0x00141614        0x0 build/SpawnFinishLine.o
+ .bss           0x00141614        0x0 build/COCAINE.o
+ .bss           0x00141614        0x0 build/FINISH.o
+ .bss           0x00141614        0x0 build/DrawAt.o
+ .bss           0x00141614        0x0 build/ResetGame.o
+ .bss           0x00141614        0x0 build/Left_Transition.o
+ .bss           0x00141614        0x0 build/SELECTOR.o
+ .bss           0x00141614        0x0 build/ONE.o
+ .bss           0x00141614        0x0 build/ROAD.o
+ .bss           0x00141614        0x0 build/SMART.o
+ .bss           0x00141614        0x0 build/LIFE.o
+ .bss           0x00141614        0x0 build/SIDES.o
+ .bss           0x00141614        0x0 build/MainMenu.o
+ .bss           0x00141614        0x0 build/COCAINETANK.o
+ .bss           0x00141614        0x0 build/EIGHT.o
+ .bss           0x00141614        0x0 build/FOUR.o
+ .bss           0x00141614        0x0 build/SNES.o
+ .bss           0x00141614        0x0 build/CREATORS.o
+ .bss           0x00141614        0x0 build/INTRO.o
+ .bss           0x00141614        0x0 build/FIVE.o
+ .bss           0x00141614        0x0 build/WALL.o
+ .bss           0x00141614        0x0 build/POLICE.o
+ .bss           0x00141614        0x0 build/MoveFinishLine.o
+ .bss           0x00141614        0x0 build/MoveCocaine.o
+ .bss           0x00141614        0x0 build/Right_Transition.o
+ .bss           0x00141614        0x0 build/getObjectElement.o
+ .bss           0x00141614        0x0 build/DecrementFuel.o
+ .bss           0x00141614        0x0 build/SpawnCocaine.o
+ .bss           0x00141614        0x0 build/TIME.o
+ .bss           0x00141614        0x0 build/GameLength.o
+ .bss           0x00141614        0x0 build/DecipherSNES.o
+ .bss           0x00141614        0x0 build/DecrementLives.o
+ .bss           0x00141614        0x0 build/BLACK.o
+ .bss           0x00141614        0x0 build/Transition.o
+ .bss           0x00141614        0x0 build/SHRUB_B.o
+ .bss           0x00141614        0x0 build/Filler.o
+ .bss           0x00141614        0x0 build/DrawArray.o
+ .bss           0x00141614        0x0 build/SpawnPig.o
+ .bss           0x00141614        0x0 build/MovePig.o
+ .bss           0x00141614        0x0 build/WinGame.o
+
+.ARM.attributes
+                0x00000000       0x29
+ .ARM.attributes
+                0x00000000       0x29 build/DisplayLives.o
+ .ARM.attributes
+                0x00000029       0x29 build/StartTimer.o
+ .ARM.attributes
+                0x00000052       0x29 build/sideArray.o
+ .ARM.attributes
+                0x0000007b       0x29 build/jtag.o
+ .ARM.attributes
+                0x000000a4       0x29 build/LoseGame.o
+ .ARM.attributes
+                0x000000cd       0x29 build/framebuffer.o
+ .ARM.attributes
+                0x000000f6       0x29 build/MEDIAN.o
+ .ARM.attributes
+                0x0000011f       0x29 build/Move.o
+ .ARM.attributes
+                0x00000148       0x29 build/NINE.o
+ .ARM.attributes
+                0x00000171       0x29 build/CheckCollision.o
+ .ARM.attributes
+                0x0000019a       0x29 build/BLACKNum.o
+ .ARM.attributes
+                0x000001c3       0x29 build/THREE.o
+ .ARM.attributes
+                0x000001ec       0x29 build/Draw.o
+ .ARM.attributes
+                0x00000215       0x29 build/SHRUB_A.o
+ .ARM.attributes
+                0x0000023e       0x29 build/PASSED.o
+ .ARM.attributes
+                0x00000267       0x29 build/DUMB.o
+ .ARM.attributes
+                0x00000290       0x29 build/IncrementFuel.o
+ .ARM.attributes
+                0x000002b9       0x29 build/BUSTED.o
+ .ARM.attributes
+                0x000002e2       0x29 build/FOURX4ROAD.o
+ .ARM.attributes
+                0x0000030b       0x29 build/GRASS.o
+ .ARM.attributes
+                0x00000334       0x29 build/Paint.o
+ .ARM.attributes
+                0x0000035d       0x29 build/DisplayFuel.o
+ .ARM.attributes
+                0x00000386       0x29 build/generateRandomNum.o
+ .ARM.attributes
+                0x000003af       0x29 build/clearScreen.o
+ .ARM.attributes
+                0x000003d8       0x29 build/SEVEN.o
+ .ARM.attributes
+                0x00000401       0x29 build/collisionDetection.o
+ .ARM.attributes
+                0x0000042a       0x29 build/main.o
+ .ARM.attributes
+                0x00000453       0x29 build/ZERO.o
+ .ARM.attributes
+                0x0000047c       0x29 build/SIX.o
+ .ARM.attributes
+                0x000004a5       0x29 build/TWO.o
+ .ARM.attributes
+                0x000004ce       0x29 build/CAR.o
+ .ARM.attributes
+                0x000004f7       0x29 build/InitializeGame.o
+ .ARM.attributes
+                0x00000520       0x29 build/BLACK190X64.o
+ .ARM.attributes
+                0x00000549       0x29 build/SpawnFinishLine.o
+ .ARM.attributes
+                0x00000572       0x29 build/COCAINE.o
+ .ARM.attributes
+                0x0000059b       0x29 build/FINISH.o
+ .ARM.attributes
+                0x000005c4       0x29 build/DrawAt.o
+ .ARM.attributes
+                0x000005ed       0x29 build/ResetGame.o
+ .ARM.attributes
+                0x00000616       0x29 build/Left_Transition.o
+ .ARM.attributes
+                0x0000063f       0x29 build/SELECTOR.o
+ .ARM.attributes
+                0x00000668       0x29 build/ONE.o
+ .ARM.attributes
+                0x00000691       0x29 build/ROAD.o
+ .ARM.attributes
+                0x000006ba       0x29 build/SMART.o
+ .ARM.attributes
+                0x000006e3       0x29 build/LIFE.o
+ .ARM.attributes
+                0x0000070c       0x29 build/SIDES.o
+ .ARM.attributes
+                0x00000735       0x29 build/MainMenu.o
+ .ARM.attributes
+                0x0000075e       0x29 build/COCAINETANK.o
+ .ARM.attributes
+                0x00000787       0x29 build/EIGHT.o
+ .ARM.attributes
+                0x000007b0       0x29 build/FOUR.o
+ .ARM.attributes
+                0x000007d9       0x29 build/SNES.o
+ .ARM.attributes
+                0x00000802       0x29 build/CREATORS.o
+ .ARM.attributes
+                0x0000082b       0x29 build/INTRO.o
+ .ARM.attributes
+                0x00000854       0x29 build/FIVE.o
+ .ARM.attributes
+                0x0000087d       0x29 build/WALL.o
+ .ARM.attributes
+                0x000008a6       0x29 build/POLICE.o
+ .ARM.attributes
+                0x000008cf       0x29 build/MoveFinishLine.o
+ .ARM.attributes
+                0x000008f8       0x29 build/MoveCocaine.o
+ .ARM.attributes
+                0x00000921       0x29 build/Right_Transition.o
+ .ARM.attributes
+                0x0000094a       0x29 build/getObjectElement.o
+ .ARM.attributes
+                0x00000973       0x29 build/DecrementFuel.o
+ .ARM.attributes
+                0x0000099c       0x29 build/SpawnCocaine.o
+ .ARM.attributes
+                0x000009c5       0x29 build/TIME.o
+ .ARM.attributes
+                0x000009ee       0x29 build/GameLength.o
+ .ARM.attributes
+                0x00000a17       0x29 build/DecipherSNES.o
+ .ARM.attributes
+                0x00000a40       0x29 build/DecrementLives.o
+ .ARM.attributes
+                0x00000a69       0x29 build/BLACK.o
+ .ARM.attributes
+                0x00000a92       0x29 build/Transition.o
+ .ARM.attributes
+                0x00000abb       0x29 build/SHRUB_B.o
+ .ARM.attributes
+                0x00000ae4       0x29 build/Filler.o
+ .ARM.attributes
+                0x00000b0d       0x29 build/DrawArray.o
+ .ARM.attributes
+                0x00000b36       0x29 build/SpawnPig.o
+ .ARM.attributes
+                0x00000b5f       0x29 build/MovePig.o
+ .ARM.attributes
+                0x00000b88       0x29 build/WinGame.o
+
+.debug_line     0x00000000      0xf86
+ .debug_line    0x00000000       0x77 build/DisplayLives.o
+ .debug_line    0x00000077       0x4c build/StartTimer.o
+ .debug_line    0x000000c3       0x93 build/sideArray.o
+ .debug_line    0x00000156       0x61 build/jtag.o
+ .debug_line    0x000001b7       0x4d build/LoseGame.o
+ .debug_line    0x00000204       0x67 build/framebuffer.o
+ .debug_line    0x0000026b       0x5b build/Move.o
+ .debug_line    0x000002c6       0x75 build/CheckCollision.o
+ .debug_line    0x0000033b       0x50 build/Draw.o
+ .debug_line    0x0000038b       0x53 build/IncrementFuel.o
+ .debug_line    0x000003de       0x72 build/Paint.o
+ .debug_line    0x00000450       0x88 build/DisplayFuel.o
+ .debug_line    0x000004d8       0x75 build/generateRandomNum.o
+ .debug_line    0x0000054d       0x5c build/clearScreen.o
+ .debug_line    0x000005a9       0xa0 build/collisionDetection.o
+ .debug_line    0x00000649       0x51 build/main.o
+ .debug_line    0x0000069a       0x8a build/InitializeGame.o
+ .debug_line    0x00000724       0x61 build/SpawnFinishLine.o
+ .debug_line    0x00000785       0x5b build/DrawAt.o
+ .debug_line    0x000007e0       0x6d build/ResetGame.o
+ .debug_line    0x0000084d       0x65 build/Left_Transition.o
+ .debug_line    0x000008b2       0x4e build/SIDES.o
+ .debug_line    0x00000900       0x79 build/MainMenu.o
+ .debug_line    0x00000979       0xc7 build/SNES.o
+ .debug_line    0x00000a40       0x5f build/MoveFinishLine.o
+ .debug_line    0x00000a9f       0x5e build/MoveCocaine.o
+ .debug_line    0x00000afd       0x66 build/Right_Transition.o
+ .debug_line    0x00000b63       0x50 build/getObjectElement.o
+ .debug_line    0x00000bb3       0x55 build/DecrementFuel.o
+ .debug_line    0x00000c08       0x62 build/SpawnCocaine.o
+ .debug_line    0x00000c6a       0x4e build/GameLength.o
+ .debug_line    0x00000cb8       0x5d build/DecipherSNES.o
+ .debug_line    0x00000d15       0x54 build/DecrementLives.o
+ .debug_line    0x00000d69       0x6a build/Transition.o
+ .debug_line    0x00000dd3       0x5c build/Filler.o
+ .debug_line    0x00000e2f       0x62 build/DrawArray.o
+ .debug_line    0x00000e91       0x4f build/SpawnPig.o
+ .debug_line    0x00000ee0       0x5a build/MovePig.o
+ .debug_line    0x00000f3a       0x4c build/WinGame.o
+
+.debug_info     0x00000000      0xe7b
+ .debug_info    0x00000000       0x61 build/DisplayLives.o
+ .debug_info    0x00000061       0x5f build/StartTimer.o
+ .debug_info    0x000000c0       0x5e build/sideArray.o
+ .debug_info    0x0000011e       0x59 build/jtag.o
+ .debug_info    0x00000177       0x5d build/LoseGame.o
+ .debug_info    0x000001d4       0x60 build/framebuffer.o
+ .debug_info    0x00000234       0x59 build/Move.o
+ .debug_info    0x0000028d       0x63 build/CheckCollision.o
+ .debug_info    0x000002f0       0x59 build/Draw.o
+ .debug_info    0x00000349       0x62 build/IncrementFuel.o
+ .debug_info    0x000003ab       0x5a build/Paint.o
+ .debug_info    0x00000405       0x60 build/DisplayFuel.o
+ .debug_info    0x00000465       0x66 build/generateRandomNum.o
+ .debug_info    0x000004cb       0x60 build/clearScreen.o
+ .debug_info    0x0000052b       0x67 build/collisionDetection.o
+ .debug_info    0x00000592       0x55 build/main.o
+ .debug_info    0x000005e7       0x63 build/InitializeGame.o
+ .debug_info    0x0000064a       0x64 build/SpawnFinishLine.o
+ .debug_info    0x000006ae       0x5b build/DrawAt.o
+ .debug_info    0x00000709       0x5e build/ResetGame.o
+ .debug_info    0x00000767       0x64 build/Left_Transition.o
+ .debug_info    0x000007cb       0x5a build/SIDES.o
+ .debug_info    0x00000825       0x5d build/MainMenu.o
+ .debug_info    0x00000882       0x59 build/SNES.o
+ .debug_info    0x000008db       0x63 build/MoveFinishLine.o
+ .debug_info    0x0000093e       0x60 build/MoveCocaine.o
+ .debug_info    0x0000099e       0x65 build/Right_Transition.o
+ .debug_info    0x00000a03       0x65 build/getObjectElement.o
+ .debug_info    0x00000a68       0x62 build/DecrementFuel.o
+ .debug_info    0x00000aca       0x61 build/SpawnCocaine.o
+ .debug_info    0x00000b2b       0x5f build/GameLength.o
+ .debug_info    0x00000b8a       0x61 build/DecipherSNES.o
+ .debug_info    0x00000beb       0x63 build/DecrementLives.o
+ .debug_info    0x00000c4e       0x5f build/Transition.o
+ .debug_info    0x00000cad       0x5b build/Filler.o
+ .debug_info    0x00000d08       0x5e build/DrawArray.o
+ .debug_info    0x00000d66       0x5d build/SpawnPig.o
+ .debug_info    0x00000dc3       0x5c build/MovePig.o
+ .debug_info    0x00000e1f       0x5c build/WinGame.o
+
+.debug_abbrev   0x00000000      0x30a
+ .debug_abbrev  0x00000000       0x14 build/DisplayLives.o
+ .debug_abbrev  0x00000014       0x14 build/StartTimer.o
+ .debug_abbrev  0x00000028       0x14 build/sideArray.o
+ .debug_abbrev  0x0000003c       0x14 build/jtag.o
+ .debug_abbrev  0x00000050       0x14 build/LoseGame.o
+ .debug_abbrev  0x00000064       0x14 build/framebuffer.o
+ .debug_abbrev  0x00000078       0x14 build/Move.o
+ .debug_abbrev  0x0000008c       0x14 build/CheckCollision.o
+ .debug_abbrev  0x000000a0       0x14 build/Draw.o
+ .debug_abbrev  0x000000b4       0x14 build/IncrementFuel.o
+ .debug_abbrev  0x000000c8       0x14 build/Paint.o
+ .debug_abbrev  0x000000dc       0x14 build/DisplayFuel.o
+ .debug_abbrev  0x000000f0       0x14 build/generateRandomNum.o
+ .debug_abbrev  0x00000104       0x14 build/clearScreen.o
+ .debug_abbrev  0x00000118       0x14 build/collisionDetection.o
+ .debug_abbrev  0x0000012c       0x12 build/main.o
+ .debug_abbrev  0x0000013e       0x14 build/InitializeGame.o
+ .debug_abbrev  0x00000152       0x14 build/SpawnFinishLine.o
+ .debug_abbrev  0x00000166       0x14 build/DrawAt.o
+ .debug_abbrev  0x0000017a       0x14 build/ResetGame.o
+ .debug_abbrev  0x0000018e       0x14 build/Left_Transition.o
+ .debug_abbrev  0x000001a2       0x14 build/SIDES.o
+ .debug_abbrev  0x000001b6       0x14 build/MainMenu.o
+ .debug_abbrev  0x000001ca       0x14 build/SNES.o
+ .debug_abbrev  0x000001de       0x14 build/MoveFinishLine.o
+ .debug_abbrev  0x000001f2       0x14 build/MoveCocaine.o
+ .debug_abbrev  0x00000206       0x14 build/Right_Transition.o
+ .debug_abbrev  0x0000021a       0x14 build/getObjectElement.o
+ .debug_abbrev  0x0000022e       0x14 build/DecrementFuel.o
+ .debug_abbrev  0x00000242       0x14 build/SpawnCocaine.o
+ .debug_abbrev  0x00000256       0x14 build/GameLength.o
+ .debug_abbrev  0x0000026a       0x14 build/DecipherSNES.o
+ .debug_abbrev  0x0000027e       0x14 build/DecrementLives.o
+ .debug_abbrev  0x00000292       0x14 build/Transition.o
+ .debug_abbrev  0x000002a6       0x14 build/Filler.o
+ .debug_abbrev  0x000002ba       0x14 build/DrawArray.o
+ .debug_abbrev  0x000002ce       0x14 build/SpawnPig.o
+ .debug_abbrev  0x000002e2       0x14 build/MovePig.o
+ .debug_abbrev  0x000002f6       0x14 build/WinGame.o
+
+.debug_aranges  0x00000000      0x4e8
+ .debug_aranges
+                0x00000000       0x20 build/DisplayLives.o
+ .debug_aranges
+                0x00000020       0x20 build/StartTimer.o
+ .debug_aranges
+                0x00000040       0x20 build/sideArray.o
+ .debug_aranges
+                0x00000060       0x20 build/jtag.o
+ .debug_aranges
+                0x00000080       0x20 build/LoseGame.o
+ .debug_aranges
+                0x000000a0       0x20 build/framebuffer.o
+ .debug_aranges
+                0x000000c0       0x20 build/Move.o
+ .debug_aranges
+                0x000000e0       0x20 build/CheckCollision.o
+ .debug_aranges
+                0x00000100       0x20 build/Draw.o
+ .debug_aranges
+                0x00000120       0x20 build/IncrementFuel.o
+ .debug_aranges
+                0x00000140       0x20 build/Paint.o
+ .debug_aranges
+                0x00000160       0x20 build/DisplayFuel.o
+ .debug_aranges
+                0x00000180       0x20 build/generateRandomNum.o
+ .debug_aranges
+                0x000001a0       0x20 build/clearScreen.o
+ .debug_aranges
+                0x000001c0       0x20 build/collisionDetection.o
+ .debug_aranges
+                0x000001e0       0x28 build/main.o
+ .debug_aranges
+                0x00000208       0x20 build/InitializeGame.o
+ .debug_aranges
+                0x00000228       0x20 build/SpawnFinishLine.o
+ .debug_aranges
+                0x00000248       0x20 build/DrawAt.o
+ .debug_aranges
+                0x00000268       0x20 build/ResetGame.o
+ .debug_aranges
+                0x00000288       0x20 build/Left_Transition.o
+ .debug_aranges
+                0x000002a8       0x20 build/SIDES.o
+ .debug_aranges
+                0x000002c8       0x20 build/MainMenu.o
+ .debug_aranges
+                0x000002e8       0x20 build/SNES.o
+ .debug_aranges
+                0x00000308       0x20 build/MoveFinishLine.o
+ .debug_aranges
+                0x00000328       0x20 build/MoveCocaine.o
+ .debug_aranges
+                0x00000348       0x20 build/Right_Transition.o
+ .debug_aranges
+                0x00000368       0x20 build/getObjectElement.o
+ .debug_aranges
+                0x00000388       0x20 build/DecrementFuel.o
+ .debug_aranges
+                0x000003a8       0x20 build/SpawnCocaine.o
+ .debug_aranges
+                0x000003c8       0x20 build/GameLength.o
+ .debug_aranges
+                0x000003e8       0x20 build/DecipherSNES.o
+ .debug_aranges
+                0x00000408       0x20 build/DecrementLives.o
+ .debug_aranges
+                0x00000428       0x20 build/Transition.o
+ .debug_aranges
+                0x00000448       0x20 build/Filler.o
+ .debug_aranges
+                0x00000468       0x20 build/DrawArray.o
+ .debug_aranges
+                0x00000488       0x20 build/SpawnPig.o
+ .debug_aranges
+                0x000004a8       0x20 build/MovePig.o
+ .debug_aranges
+                0x000004c8       0x20 build/WinGame.o
+
+.debug_ranges   0x00000000       0x20
+ .debug_ranges  0x00000000       0x20 build/main.o
