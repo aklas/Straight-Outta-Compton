@@ -2,7 +2,7 @@
 This is a video game me and my friend (Munib) made a while back. The video game runs on bare metal (no OS) Rasberry Pi Arm processor. To control the video game we wrote our own drivers for the SNES controller (SNES.s).
 https://www.youtube.com/watch?v=Ki9PJ29D-nE&feature=youtu.be
 
-![Alt text](/blob/master/pictures/INTRO.png?raw=true "Optional Title")
+![ScreenShot](https://raw.github.com/Aklas/Straight-Outta-Compton/blob/master/pictures/INTRO.png)
 
 # How to run and install
 You will need a JTAG unit to flash the rasberry Pi, and then set the PC register to point to the inital instruction.
