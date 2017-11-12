@@ -1,5 +1,6 @@
 # Straight-Outta-Compton (A bare metal ARM video game)
 This is a video game me and my friend (Munib) made a while back. The video game runs on bare metal (no OS) Rasberry Pi Arm processor. To control the video game we wrote our own drivers for the SNES controller (SNES.s).
+https://www.youtube.com/watch?v=Ki9PJ29D-nE&feature=youtu.be
 
 # How to run and install
 You will need a JTAG unit to flash the rasberry Pi, and then set the PC register to point to the inital instruction.
